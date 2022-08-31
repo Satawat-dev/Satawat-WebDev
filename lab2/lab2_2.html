@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border:1px solid black;
+            padding: 20px;
+            
+        }
+    </style>
+</head>
+
+
+<body>
+    <form >
+        <fieldset>
+            <legend>ข้อมูลทั่วไป</legend>
+            ชื่อ-สกุล :<br/><input type="text"  placeholder="กรอกชื่อ-สกุล" pattern="[A-Za-z]+" required><br/>
+            Email:<br/><input type="text" pattern="[A-Za-z]+[@][eghot]mail[.]com" required><br/>
+            โทรศัพท์ :<br/><input type="text"  value="+66" pattern="^\+66[0-9]{9}" required><br/>
+            ที่อยู่ :<br/><textarea rows="4" cols="50" ></textarea><br/>
+            รหัสไปรษณีย์ :<input type="text" style="width: 50px;" pattern="[0-9]{5}"><br/>
+            รูปผู้จอง :<input type="file" ><br/>
+        </fieldset>
+        <fieldset>
+            <legend>ข้อมูลเข้าสู่ระบบ</legend>
+            Username:<br/><input type="text" pattern="\w{8,}" required><br/>
+            ประกอบด้วยตัวเลข ตัวอักษร หรือ _ตั้งแต่ 8 ตัวขึ้นไป<br/>
+            Password :<br/><input type="password" pattern="[0-9A-Za-z]{8,}" required><br/>
+            ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป<br/>         
+        </fieldset>
+        <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ :</legend>
+            แพ็คเก็จทัวร์ :
+            <select >
+                <option hidden value="default">--select--</option>
+                <option value="1">ไทย</option>
+                <option value="2">ญี่ปุน</option>
+                <option value="3">อเมริกา</option>
+            </select>
+            <br/>
+            วันที่เดินทาง : <input type="date"><br/>
+            จำนวนผู้เดินทาง : <input type="number" min="1" max="10" required><br/>
+            เน้นการท่องเที่ยวแบบใด?<br/>
+            <input type="checkbox"> ชอปปิ้ง <br/>
+            <input type="checkbox"> ธรรมชาติ <br/>
+            <input type="checkbox"> ทะเล <br/>
+        </fieldset>
+        ยอมรับเงื่อนไขและข้อตกลง <input type="radio" name="onselect" required>I agree <input type="radio" name="onselect" required>I disagree <input type="submit" value="จอง">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        ชื่อเต็ม/ย่อของสาขา : <input type="text"><br/>
+        จำนวนเงินที่จะโอน : <input type="number" min="1"><br/>
+        อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย : 
+        <select>
+            <option hidden value="default">--select--</option>
+            <option value="1">ผัดไทย</option>
+            <option value="2">ข้าวผัด</option>
+            <option value="3">ต้มยำกุ้ง</option>
+            <option value="4">ขนมปัง</option>
+            <option value="5">ซูชิ</option>
+        </select>
+        <br/>
+        ค่าไฟฟ้า 3 เดือนที่ผ่านมา : <input type="number" min="1"><br/>
+        รหัสบัตรประชาชน : <input type="text" pattern="[0-9]{13}"><br/>
+        ความพึ่งพอใจของหนังสือเล่มนี้ : 
+        <select>
+            <option hidden value="default">--select--</option>
+            <option value="11">พอใจมาก</option>
+            <option value="22">พอใจปานกลาง</option>
+            <option value="33">พอใจน้อย</option>
+        </select>
+        <br/>
+        อาการป่วย :<br/><textarea rows="3" cols="50"></textarea><br/>
+        ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่ : <input type="radio" name="va">เคย <input type="radio" name="va"> ไม่เคย
+        <br/>
+        รหัสผ่าน : <input type="password"><br/>
+        เวลาเริ่มเข้าเรียน : <input type="time"> เวลาสิ้นสุดการเรียน : <input type="time">
+        <br/>
+        วันเวลาที่ต้องไปพบแพทย์ : <input type="datetime-local">
+        
+    </form>
+   
+</body>
+</html>
