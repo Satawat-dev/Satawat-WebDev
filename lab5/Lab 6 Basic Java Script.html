@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let student = [
+        {
+            fullname:'นายตั้งใจ เรียนมาก' ,
+            age: 18,
+            year: 1,
+            gpa: 3.40,
+            help: true
+        },
+        {
+            fullname: 'นายส่งงาน ตลอดมา',
+            age: 19,
+            year: 2,
+            gpa: 3.00,
+            help: false
+        },
+        {
+            fullname: 'นางสาวใส่ใจ ดีงาม',
+            age: 20,
+            year: 3,
+            gpa: 2.90,
+            help: true
+        },
+    ]
+
+    let ch1 = [];
+    let ch2 = [];
+    let ch3 = [];
+    let c1 = 0;
+    let c2 = 0;
+    let c3 = 0;
+    let i = 0; let len = student.length;
+
+    while(i < len)
+    {
+        student[i].year = 2547 - student[i].year; 
+        if(student[i].gpa >= 3.20 && student[i].help == true)
+        {
+            if((2547-student[i].year) == 1){
+                ch1[c1] = student[i].fullname+'เกิดเมื่อปี '+student[i].year+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย';
+                c1++;
+            }
+            else if((2547-student[i].year) == 2){
+                ch2[c2] = student[i].fullname+'เกิดเมื่อปี '+student[i].year+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย';
+                c2++;
+            }
+            else{
+                ch3[c3] = student[i].fullname+'เกิดเมื่อปี '+student[i].year+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย';
+                c3++;
+            }
+        }
+        else if(student[i].gpa >= 3.20 && student[i].help == false)
+        {
+            //console.log(student[i].fullname,'เกิดเมื่อปี',student[i].year,'ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์')
+            if((2547-student[i].year) == 1){
+                ch1[c1] = student[i].fullname+'เกิดเมื่อปี '+student[i].year+'ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์';
+                c1++;
+            }
+            else if((2547-student[i].year) == 2){
+                ch2[c2] = student[i].fullname+'เกิดเมื่อปี '+student[i].year+'ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์';
+                c2++;
+            }
+            else{
+                ch3[c3] = student[i].fullname+'เกิดเมื่อปี '+student[i].year+'ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์';
+                c3++;
+            }
+        }
+        else if(student[i].gpa >= 2.75 && student[i].help == true && (2547 - student[i].year) >= 2)
+        {
+            //console.log(student[i].fullname,'เกิดเมื่อปี',student[i].year,'ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+            if((2547-student[i].year) == 1){
+                ch1[c1] = student[i].fullname+'เกิดเมื่อปี '+student[i].year+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย';
+                c1++;
+            }
+            else if((2547-student[i].year) == 2){
+                ch2[c2] = student[i].fullname+'เกิดเมื่อปี '+student[i].year+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย';
+                c2++;
+            }
+            else{
+                ch3[c3] = student[i].fullname+'เกิดเมื่อปี '+student[i].year+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย';
+                c3++;
+            }
+        }
+        else if(student[i].gpa >= 2.75 && student[i].help == false)
+        {
+            //log(student[i].fullname,'เกิดเมื่อปี',student[i].year,'ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์แต่ไม่ได้ช่วยงานภาควิชา')
+        }
+        else
+        {
+            //console.log(student[i].fullname,'เกิดเมื่อปี',student[i].year,'ไม่ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์และยังไม่ช่วยงานภาควิชาด้วย')
+        }
+        i++;
+    }
+    let k = 0;
+    while(k < 3)
+    {
+        if(k==0)
+        {
+            console.log("ปี 1 ")
+            if(ch1.length == 0)
+            {
+                console.log("ไม่มี")
+                
+            }
+            else{
+                for(let j = 0;j<ch1.length;j++)
+                {
+                    console.log(ch1[j]);
+                }
+            }
+        }
+        else if(k == 1)
+        {
+            console.log("ปี 2 ")
+            if(ch2.length == 0)
+            {
+                console.log("ไม่มี")
+                
+            }
+            else{
+                for(let j = 0;j<ch2.length;j++)
+                {
+                    console.log(ch2[j]);
+                }
+            }
+            
+        }
+        else{
+            console.log("ปี 3 ")
+            if(ch3.length == 0)
+            {
+                console.log("ไม่มี")
+                
+            }
+            else{
+                for(let j = 0;j<ch3.length;j++)
+                {
+                    console.log(ch3[j]);
+                }
+            }
+        }
+        k++;
+    }
+        
+        
+    
+
+    let d = new Date();
+    let day = d.getDate();
+    let month = d.getMonth();
+    let year = d.getFullYear();
+    let time = d.getHours();
+    let minute = d.getMinutes();
+
+    console.log(d);
+    console.log('วันนี้',day,'/',month+1,'/',year+543);
+    console.log('เวลา',time,'.',minute,'น.');
+</script>
+<body>
+    <h1 style="text-align: center;">Lab 6 Basic Java Script</h1>
+</body>
+</html>

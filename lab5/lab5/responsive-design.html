@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/51b8df138d.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .botton{
+        color: white;
+        font-weight: bold;
+        width: 125px;
+        padding: 10px;
+        background-color: blue;
+        border-radius: 14px;
+    }
+    .content{
+        float: left;
+        padding: 20px;
+        width: 80%;
+        background-color: #f1f1f1;
+        height: 300px; 
+    }
+    .product{
+        float: left;
+        width: 20%;
+        height: 300px;
+        background: #ccc;
+        /*padding: 20px;*/
+    }
+    .product img{
+        width: 100%;
+        height: 100%;
+    }
+    .flexible::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    a {
+        text-decoration: none; 
+    }
+    a i{
+        padding-right: 5px;
+    }
+    @media (max-width : 600px) {
+        .flexible{
+        width: 400px;
+        height: auto;
+    }
+	.product { 
+         width: 400px ;
+         height: auto;
+    }
+    .product img{
+        width: 100%;
+    }
+	.content { 
+        width: 400px ;
+        height: auto ; 
+    }
+    .botton{
+        color: white;
+        font-weight: bold;
+        width: 360px;
+        padding: 10px;
+        background-color: blue;
+        border-radius: 14px;
+        text-align: center;
+    }		
+	}
+</style>
+<body>
+    <div class="flexible">
+        
+		<div class="product">
+            <img src="imgs/clock.jpg">
+        </div>
+
+        <div class="content">
+            Garmin Instinct, Rugged Outdoor Watch with GPS, 
+            Features GLONASS and Galileo, Heart Rate Monitoring and
+            3-axis Compass, Tundra<br><br>
+            <div class="wrap">
+                <a href="">
+                    <div class="botton"> <i class="fa-solid fa-cart-plus"></i>Add to cart</div>
+                </a>
+            </div>
+		</div>
+
+    </div>
+
+</body>
+</html>
