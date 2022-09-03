@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkUse() {
+            let c0 = document.getElementById("pass0");
+            let ch0 = c0.value;
+            let c1 = document.getElementById("pass1");
+            let ch1 = c1.value;
+            let c2 = document.getElementById("pass2");
+            let ch2 = c2.value;
+            
+            if(ch0 != "" )
+            {
+                c0.style.color = "green";
+            }
+            if(ch1 != "" )
+            {
+                c1.style.color = "green";
+            }
+            if(ch2 != "" )
+            {
+                c2.style.color = "green";
+            }
+            //console.log(ch1);
+            //console.log(ch2);
+        }
+    </script>
+</head>
+<body>
+    Name: <input type="text"  id="pass0" oninput="checkUse()"><br>
+    Age: <input type="text" id="pass1" oninput="checkUse()"><br>
+    Birthdate: <input type="text" id="pass2" oninput="checkUse()"><br>
+</body>
+</html>
